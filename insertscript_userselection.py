@@ -5,11 +5,10 @@ import psycopg2.extras as extras
 # from sqlalchemy import create_engine
 from io import StringIO
 import numpy as np
-import os 
+import os, random
 # from psycopg2.extensions import register_adapter, AsIs
 # psycopg2.extensions.register_adapter(np.int64, psycopg2._psycopg.AsIs)
 
-# Here you want to change your database, username & password according to your own values
 param_dic = {
     "host"      : "localhost",
     "database"  : "test1",
@@ -29,12 +28,6 @@ def connect(params_dic):
         sys.exit(1) 
     print("Connection successful")
     return conn
-
-conn = connect(param_dic)
-
-data = {'user_id':1,'user_sel_1':1,'user_sel_2':1,'user_sel_3':1,'sum_of_scores':80}
-df = pd.DataFrame(data, index=[0])
-df = df.convert_dtypes()
 
 def execute_many(conn, df, table):
     """
@@ -61,5 +54,46 @@ def execute_many(conn, df, table):
     print("execute_many() done")
     cursor.close()
 
-x = execute_many(conn, df, 'user_selection')
+# select unique player ids
+conn = connect(param_dic)
+cursor = conn.cursor()
+postgreSQL_select_Query = "select player_id from player"
+cursor.execute(postgreSQL_select_Query)
+print("Selecting rows from player table using cursor.fetchall")
+player_records = cursor.fetchall()
+list_of_player_ids = []
+for row in player_records:
+    list_of_player_ids.append(row[0])
+print(list_of_player_ids)
+cursor.close()
+conn.close()
 
+# select unique user ids
+conn = connect(param_dic)
+cursor = conn.cursor()
+postgreSQL_select_Query = 'SELECT user_id, username, email, role_type FROM public."user"'
+cursor.execute(postgreSQL_select_Query)
+print("Selecting rows from user table using cursor.fetchall")
+user_records = cursor.fetchall()
+user_id_list = []
+for row in user_records:
+    user_id_list.append(row[0])
+print(user_id_list)
+cursor.close()
+conn.close()
+
+# execute many
+conn = connect(param_dic)
+cursor = conn.cursor()
+user_id_list = random.choices(user_id_list, k=1000)
+user_sel_1_list = random.choices(list_of_player_ids, k=1000)
+user_sel_2_list = random.choices(list_of_player_ids, k=1000)
+user_sel_3_list = random.choices(list_of_player_ids, k=1000)
+sum_of_scores = [sum(x) for x in zip(user_sel_1_list, user_sel_2_list, user_sel_3_list)]
+print(len(user_sel_1_list))
+print(len(user_id_list))
+data = {'user_id':user_id_list,'user_sel_1':user_sel_1_list,'user_sel_2':user_sel_2_list,'user_sel_3':user_sel_3_list,'sum_of_scores':sum_of_scores}
+df = pd.DataFrame(data)
+df = df.convert_dtypes()
+x = execute_many(conn, df, 'user_selection')
+conn.close()
