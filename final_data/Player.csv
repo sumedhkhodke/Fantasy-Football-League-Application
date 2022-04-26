@@ -1,0 +1,301 @@
+﻿player_id,player_name,position,goals_scored,assist,games_played,team_id,elo_score,country,num_fouls,age
+1,Cristiano Ronaldo,ATT,17,4,19,1,91,Portugal,5,37
+2,Jadon Sancho,ATT,5,7,19,1,89,England,7,21
+3,Bruno Fernandes,MID,7,12,19,1,88,Portugal,2,27
+4,David De Gea,GK,0,0,19,1,87,Spain,2,31
+5,Raphael Varane,DEF,2,0,19,1,88,France,4,28
+6,Harry Maguire,DEF,0,0,17,1,83,England,10,29
+7,Paul Pogba,MID,2,14,19,1,86,France,6,28
+8,Juan Mata,MID,0,0,14,1,77,Spain,1,33
+9,Marcus Rashford,ATT,4,0,12,1,87,England,4,24
+10,Jesse Lingard,MID,1,1,5,1,83,England,4,29
+11,Edinson Cavani,ATT,2,2,7,1,83,Argentina,3,35
+12,Anthony Elanga,ATT,4,0,19,1,82,England,6,19
+13,Fred,MID,0,0,15,1,80,Brazil,4,29
+14,Alex Telles,DEF,0,0,19,1,82,Brazil,8,29
+15,Scott McTominay,MID,0,0,16,1,84,England,7,25
+16,Alisson,GK,0,0,16,2,90,Brazil,2,29
+17,Trent Alexander Arnold,DEF,3,11,19,2,90,England,3,23
+18,Virgil Van Dijk,DEF,2,1,19,2,89,Netherlands,2,30
+19,Andrew Robertson,DEF,2,7,17,2,87,Scotland,6,27
+20,Fabinho,MID,0,0,19,2,87,Brazil,5,28
+21,Jordan Henderson,MID,4,2,16,2,83,England,1,31
+22,Diogo Jota,ATT,7,4,19,2,86,Portugal,6,25
+23,Mohammed Salah,ATT,8,5,19,2,91,Egypt,9,29
+24,Sadio Mane,ATT,6,5,19,2,89,Senegal,4,29
+25,Roberto Firmino,ATT,4,0,11,2,85,Brazil,3,30
+26,James Milner,MID,0,0,13,2,78,England,2,36
+27,Adrian ,GK,0,0,3,2,72,Spain,5,35
+28,Takumi Minamino,ATT,1,0,8,2,77,Japan,6,27
+29,Harvey Elliott,ATT,0,0,2,2,81,England,2,18
+30,Joe Gomez,DEF,0,0,12,2,86,England,1,24
+31,Ederson,GK,0,0,19,3,91,Brazil,2,28
+32,Kyle Walker,DEF,0,0,19,3,85,England,3,31
+33,Ruben Dias,DEF,0,0,18,3,91,Portugal,3,24
+34,Aymeric Laporte,DEF,0,0,19,3,88,Spain,5,27
+35,Joao Cancelo,DEF,0,0,19,3,88,Portugal,3,27
+36,Rodri,MID,2,3,19,3,89,Spain,1,25
+37,Kevin De Bruyne,MID,5,11,19,3,91,Belgium,2,30
+38,Bernanrdo Silva,MID,7,2,19,3,87,Portugal,2,27
+39,Phil Foden,ATT,4,3,10,3,92,England,4,21
+40,Raheem Sterling,ATT,6,1,17,3,87,England,5,27
+41,Jack Grealish,ATT,2,1,8,3,85,England,2,26
+42,Fernandinho,MID,0,2,19,3,85,Brazil,1,36
+43,John Stones,DEF,0,0,10,3,82,England,4,27
+44,Riyad Mahrez,ATT,4,4,8,3,86,Algeria,7,31
+45,Gabriel Jesus,ATT,1,0,11,3,87,Brazil,5,24
+46,Mendy,GK,0,0,14,4,87,Senegal,2,30
+47,Azpilicueta,DEF,0,0,19,4,83,Spain,4,32
+48,Andreas Christensen,DEF,0,0,19,4,86,Denmark,7,25
+49,Thiago,DEF,0,0,19,4,85,Brazil,9,37
+50,Antonio Rudiger,DEF,2,0,19,4,86,Germany,4,29
+51,Marcos Alonso,DEF,0,2,17,4,80,Spain,2,31
+52,Ngolo Kante,MID,3,8,19,4,90,France,4,30
+53,Jorginho,MID,4,4,19,4,85,Italy,6,30
+54,Mason Mount,ATT,8,2,19,4,89,England,5,23
+55,Romelu Lukaku,ATT,7,9,19,4,87,Belgium,2,28
+56,Mateo Kovacic,MID,2,2,19,4,85,Croatia,2,27
+57,Kai Havertz,ATT,7,6,17,4,89,Germany,1,22
+58,Kepa,GK,0,0,5,4,83,Spain,6,27
+59,Saul,MID,1,0,2,4,82,Spain,1,27
+60,Reece James,DEF,1,0,1,4,83,England,0,22
+61,Hugo Lloris,GK,0,0,19,5,87,France,2,35
+62,Emerson,DEF,0,0,19,5,83,Brazil,3,23
+63,Christan Romero,DEF,0,0,19,5,87,Argentina,1,23
+64,Eric Dier,DEF,0,3,19,5,80,England,4,28
+65,Ben Davies,DEF,1,0,19,5,78,Wales,7,28
+66,Reguilon,DEF,0,2,15,5,84,Spain,7,25
+67,Pierre Emile Hojberg,MID,3,3,17,5,84,Denmark,5,26
+68,Oliver Skipp,MID,0,6,19,5,84,England,3,21
+69,Lucas Moura,ATT,6,1,19,5,81,Brazil,2,29
+70,Harry Kane,ATT,12,7,19,5,89,England,4,28
+71,Heung Min Son,ATT,11,10,19,5,89,Korea,7,29
+72,Dejan Kulusevski,ATT,6,4,14,5,87,Sweden,5,21
+73,Rodrigo Bentacur,MID,3,2,19,5,83,Uruguay,4,24
+74,Harry Winks,MID,2,8,19,5,80,England,5,26
+75,Davinson Sanchez,DEF,0,0,1,5,81,Colombia,1,25
+76,Aaron Ramsdale,GK,0,0,16,6,86,England,3,23
+77,Takehiro Tomiyasu,DEF,0,0,19,6,85,Japan,3,23
+78,Benjamin White,DEF,2,0,19,6,86,England,5,24
+79,Gabriel ,DEF,0,0,19,6,87,Brazil,6,24
+80,Kieran Tierney,DEF,2,0,19,6,87,Scotland,7,24
+81,Bukayo Saka,MID,12,7,19,6,88,England,3,20
+82,Thomas Partey,MID,4,3,19,6,84,Ghana,5,28
+83,Granit Xhaka,MID,7,10,16,6,79,Switzerland,2,29
+84,Gabriel Martinelli,MID,2,6,19,6,88,Brazil,4,20
+85,Nicolas Pepe,ATT,3,8,12,6,81,Ivory Coast,3,26
+86,Alexandre Lacazette,ATT,10,7,19,6,82,France,5,30
+87,Bernd Leno,GK,0,0,3,6,82,Germany,7,30
+88,Eddie Nketiah,ATT,7,4,11,6,79,England,8,22
+89,Cedric,DEF,0,0,2,6,75,Portugal,1,30
+90,Mohammed Elneny,MID,1,4,15,6,76,Egypt,2,29
+91,Emiliano Martinez,GK,0,0,12,7,84,Argentina ,2,28
+92,Matty Cash,DEF,0,0,19,7,78,Poland,2,23
+93,Ezri Konsa,DEF,0,0,19,7,79,England,5,23
+94,Tyrone Mings,DEF,0,2,19,7,78,England,6,28
+95,Lucas Digne,DEF,1,0,19,7,83,France,4,23
+96,Douglas Luiz,MID,4,0,18,7,77,Brazil,2,23
+97,John McGinn,MID,0,3,19,7,79,Scotland,6,26
+98,Jacob Ramsey,MID,0,3,19,7,74,England,5,20
+99,Philippe Coutinho,MID,8,7,19,7,82,Brazil,4,29
+100,Ollie Watkins,ATT,7,5,19,7,78,England,3,25
+101,Danny Ings,ATT,5,4,19,7,80,England,12,28
+102,Emiliano Buendia,ATT,7,5,19,7,79,Argentina ,1,24
+103,Ashley Young,MID,0,0,0,7,76,England,0,35
+104,Morgan Sanson,MID,0,0,0,7,76,France,0,26
+105,Robin Olsen,GK,0,0,7,7,75,Sweden,5,31
+106,Lucasz Fabianski,GK,0,0,19,8,82,Poland,7,36
+107,Ben Johnson,DEF,0,0,19,8,70,England,4,21
+108,Craig Dawson,DEF,0,1,19,8,77,England,3,31
+109,Issa Diop,DEF,0,1,19,8,77,France,5,24
+110,Aaron Cresswell,DEF,3,0,19,8,79,England,2,31
+111,Tomas Soucek,MID,0,2,19,8,82,Czech Republic,7,26
+112,Declan Rice,MID,5,8,19,8,83,England,3,22
+113,Jarrod Bowen,MID,0,0,3,8,79,England,4,24
+114,Pablo Fornals,MID,2,0,19,8,79,Spain,5,25
+115,Manuel Lanzini,MID,6,7,19,8,77,Argentina,2,28
+116,Michail Anotnio,ATT,9,4,19,8,80,Jamaica,11,31
+117,Andriy Yarmolenko,ATT,8,4,19,8,75,Ukraine,5,31
+118,Mark Noble,MID,3,9,15,8,75,England,4,34
+119,Said Benrahma,MID,2,0,12,8,78,Algeria,5,25
+120,Arthur Masuaku,DEF,0,0,3,8,75,Congo,6,27
+121,Ben Foster,GK,0,0,19,9,78,England,12,38
+122,Kiko Femenia,DEF,0,0,19,9,75,Spain,3,30
+123,Craig Cathcart,DEF,0,1,19,9,72,Northern Ireland,4,32
+124,Samir,DEF,0,2,19,9,73,Brazil,4,26
+125,Ismaila Sarr,ATT,8,3,19,9,77,Senegal,6,23
+126,Tom Cleverley,MID,4,8,19,9,74,England,14,31
+127,Imran Louza,MID,0,10,17,9,74,Morocco,2,22
+128,Moussa Sissoko,MID,2,1,11,9,78,France,11,31
+129,Emannuel Dennis,ATT,4,5,19,9,75,Nigeria,2,23
+130,Joshua King,ATT,8,6,13,9,75,Norway,12,29
+131,Joao Pedro,ATT,7,1,12,9,71,Brazil,3,19
+132,Ken Sema,MID,9,7,13,9,73,Sweden,3,27
+133,Daniel Bachmann,GK,0,0,0,9,70,Austria,0,26
+134,Danny Rose,DEF,1,0,5,9,74,England,4,30
+135,Adam Masina,DEF,1,0,2,9,74,Morocco,6,27
+136,Kasper Schmeichel,GK,0,0,19,10,84,Denmark,7,34
+137,Ricardo Pereira,DEF,0,2,19,10,83,Portugal,4,27
+138,Daniel Amartey,DEF,0,1,19,10,76,Ghana,21,26
+139,Caglar Soyuncu,DEF,0,0,19,10,79,Turkey,2,25
+140,Luke Thomas,DEF,2,0,10,10,75,England,2,20
+141,Youri Tielemans,MID,5,5,16,10,84,Belgium,3,24
+142,Wilfred Ndidi,MID,2,3,17,10,84,Nigeria,12,24
+143,James Maddison,MID,7,10,19,10,82,England,19,24
+144,Harvey Barnes,MID,1,2,11,10,80,England,2,23
+145,Patson Daka,ATT,8,3,19,10,77,Zambia,3,22
+146,Kelechi Iheanacho,ATT,8,3,19,10,78,Nigeria,4,24
+147,Ademola Lookman,MID,3,5,12,10,77,England,6,23
+148,Timothy Castagne,DEF,1,1,17,10,79,Belgium,7,25
+149,Wesley Fofana,DEF,0,1,18,10,78,France,2,20
+150,Danny Ward,GK,0,0,0,10,74,Wales,0,28
+151,Jordan Pickford,GK,0,0,19,11,81,England,3,27
+152,Seasmus Coleman,DEF,0,0,19,11,78,Republic of Ireland,6,32
+153,Ben Godfrey,DEF,0,0,19,11,77,England,8,23
+154,Michael Keane,DEF,0,1,19,11,79,England,5,28
+155,Vitaliy Mykolenko,DEF,0,1,17,11,76,Ukraine,2,22
+156,Allan,MID,2,2,17,11,81,Brazil,1,30
+157,Donny van de Beek,MID,5,8,19,11,79,Netherlands,6,24
+158,Anthony Gordon,MID,7,1,15,11,72,England,12,20
+159,Dominic Calvert-Lewin,ATT,4,6,19,11,81,England,11,24
+160,Richarlison,ATT,6,8,19,11,81,Brazil,20,24
+161,Salomon Rondon,ATT,2,1,8,11,75,Colombia,2,31
+162,Dele Alli,MID,4,1,11,11,78,England,3,25
+163,Demarai Gray,MID,0,2,12,11,77,England,5,25
+164,Mason Holgate,DEF,0,0,9,11,76,England,4,24
+165,Anwar El Ghazi,MID,1,0,5,11,76,Netherlands,2,26
+166,Tim Krul,GK,0,0,19,12,77,Netherlands,4,33
+167,Max Aarons,DEF,0,1,19,12,74,England,19,21
+168,Grant Hanley,DEF,0,1,19,12,75,Scotland,2,29
+169,Ben Gibson,DEF,2,2,19,12,72,England,2,28
+170,Josh Sargent,ATT,1,0,19,12,71,United States,4,21
+171,Mathias Normann,MID,1,2,15,12,76,Norway,7,25
+172,Pierre Lees-Melou,MID,3,3,17,12,76,France,9,28
+173,Milot Rashica,MID,4,4,19,12,76,Kosovo,7,25
+174,Teemu Pukki,ATT,8,3,19,12,75,Finland,2,31
+175,Adam Idah,ATT,4,5,19,12,69,Republic of Ireland,1,20
+176,Christos Tzolis,MID,5,4,19,12,73,Greece,4,19
+177,Kenny McLean,MID,2,5,14,12,72,Scotland,7,29
+178,Ozan Kabak,DEF,1,3,19,12,73,Turkey,5,21
+179,Angus Gunn,GK,0,0,19,12,72,England,3,25
+180,Lukas Rupp,MID,2,0,1,12,73,Germany,2,30
+181,Martin Dubravka,GK,0,0,17,13,80,Slovakia,10,32
+182,Manquillo,DEF,1,1,19,13,74,Spain,6,27
+183,Fabian Schar,DEF,0,0,19,13,76,Switzerland,8,29
+184,Dan Burn,DEF,2,1,17,13,76,England,11,29
+185,Matt Targett,DEF,0,1,12,13,77,England,3,25
+186,Ryan Fraser,MID,0,3,13,13,77,Scotland,1,27
+187,Joe Willock,MID,3,0,18,13,75,England,5,21
+188,Jonjo Shlevey,MID,3,7,19,13,76,England,6,29
+189,Joelinton,ATT,8,2,19,13,74,Brazil,3,24
+190,Allan Saint-Maximin,ATT,9,6,19,13,81,France,2,24
+191,Chris Wood,ATT,6,8,19,13,77,New Zealand,3,29
+192,Miguel Almiron,MID,2,6,3,13,76,Paraguay,3,27
+193,Jacob Murphy,MID,0,0,10,13,73,England,6,26
+194,Sean Longstaff,MID,5,1,19,13,72,England,11,23
+195,Karl Darlow,GK,0,0,2,13,75,England,2,30
+196,Illan Meslier,GK,0,0,19,14,77,France,12,21
+197,Luke Ailing,DEF,0,0,19,14,76,England,20,29
+198,Diego Llorente,DEF,0,0,19,14,77,Spain,2,27
+199,Liam Cooper,DEF,0,1,19,14,75,Scotland,3,29
+200,Junior Firpo,DEF,0,1,8,14,75,Spain,4,24
+201,Stuart Dallas,MID,1,0,10,14,75,Northern Ireland,2,30
+202,Raphinha,MID,0,8,19,14,83,Brazil,8,24
+203,Daniel James,MID,2,3,19,14,77,Wales,8,23
+204,Rodrigo ,MID,2,3,19,14,75,Spain,3,30
+205,Patrick Bamford,ATT,8,4,19,14,78,England,18,27
+206,Joe Gelhardt,ATT,6,8,19,14,69,England,16,19
+207,Jack Harrison,MID,3,0,3,14,77,England,2,24
+208,Adam Forshaw,MID,5,1,10,14,73,England,3,29
+209,Tyler Roberts,MID,0,0,5,14,72,Wales,1,22
+210,Robin Koch,DEF,2,0,10,14,76,Germany,4,24
+211,Guaita,GK,0,0,17,15,79,Spain,8,34
+212,Nathaniel Clyne,DEF,1,0,19,15,73,England,19,30
+213,Joachim Anderson,DEF,0,0,11,15,77,Denmark,3,25
+214,Marc Guehi,DEF,0,2,19,15,76,England,5,20
+215,Tyrick Mitchell,DEF,0,1,19,15,75,England,7,21
+216,Conor Gallagher,MID,2,1,19,15,78,England,9,21
+217,Jeffrey Schlupp,MID,3,1,12,15,76,Ghana,6,28
+218,Michael Olise,MID,3,1,16,15,76,France,3,19
+219,Jean Mateta,ATT,6,3,19,15,75,France,3,24
+220,Christian Benteke,ATT,8,8,19,15,75,Belgium,6,30
+221,Jordan Ayew,ATT,8,4,19,15,75,Ghana,8,29
+222,Eberechi Eze,MID,0,1,11,15,77,England,3,23
+223,James McArthur,MID,0,4,19,15,75,England,7,33
+224,Will Hughes,MID,0,2,18,15,75,England,11,26
+225,Jack Butland,GK,0,0,2,15,73,England,2,28
+226,David Raya,GK,0,0,19,16,75,Spain,1,25
+227,Kristoffer Ajer,DEF,0,0,19,16,75,Norway,17,23
+228,Pontus Jansson,DEF,0,1,19,16,75,Sweden,3,30
+229,Ethan Pinnock,DEF,0,0,19,16,75,Jamaica,7,28
+230,Rico Henry,DEF,0,0,10,16,75,England,4,23
+231,Christian Norgard,MID,2,1,19,16,75,Denmark,1,27
+232,Vitaly Janelt,MID,4,3,19,16,74,Germany,2,23
+233,Christian Eriksen,MID,7,4,12,16,82,Denmark,6,29
+234,Bryan Mbuemo,ATT,5,3,18,16,75,France,6,21
+235,Ivan Toney,ATT,4,3,19,16,77,England,3,25
+236,Yoane Wissa,ATT,5,4,19,16,75,Congo,9,24
+237,Sergi Canos,DEF,1,1,9,16,72,Spain,11,24
+238,Mathias Jensen,MID,0,7,19,16,75,Denmark,12,24
+239,Alvaro,GK,0,0,0,16,72,Spain,0,23
+240,Tariqe Fosu,DEF,0,1,1,16,70,Ghana,2,25
+241,Nick Pope,GK,0,0,19,17,81,England,4,29
+242,Connor Roberts,DEF,0,0,19,17,75,Wales,8,25
+243,Nathan Collins,DEF,0,1,19,17,73,Republic of Ireland,6,20
+244,James Tarkowski,DEF,1,0,19,17,80,England,11,28
+245,Charlie Taylor,DEF,1,0,12,17,76,England,4,27
+246,Aaron Lennon,MID,0,2,19,17,74,England,12,34
+247,Ashley Westwood,MID,3,4,18,17,76,England,16,31
+248,Josh Brownhill,MID,0,5,19,17,76,England,1,25
+249,Dwight McNeil,MID,2,2,19,17,77,England,3,21
+250,Wout Weghorst,ATT,7,8,18,17,80,France,0,28
+251,Jay Rodriguez,ATT,8,6,19,17,74,England,2,31
+252,Ashley Barnes,ATT,7,4,19,17,73,England,2,31
+253,Matej Vydra,ATT,4,2,19,17,73,Czech Republic,12,29
+254,Jack Cork,MID,1,0,8,17,75,England,5,32
+255,Matthew Lowton,MID,1,0,5,17,76,England,4,32
+256,Jan Oblak,GK,0,0,19,18,89,Slovenia,14,28
+257,Marcus Llorente,DEF,0,0,19,18,85,Spain,9,26
+258,Stefan Savic,DEF,1,0,19,18,84,Montenegro,7,30
+259,Jose Gimenez,DEF,1,0,19,18,84,Uruguay,9,26
+260,Reinildo,DEF,2,0,19,18,77,Mozambique,23,27
+261,Angel Correa,ATT,1,2,17,18,83,Argentina,7,26
+262,Hector Herrera,MID,2,0,19,18,81,Mexico,1,31
+263,Koke,MID,2,7,14,18,85,Spain,1,29
+264,Renan Lodi,MID,4,6,12,18,81,Brazil,3,23
+265,Luis Suarez,ATT,8,4,19,18,86,Uruguay,5,34
+266,Joao Felix,ATT,6,3,19,18,83,Portugal,8,21
+267,Anotine Griezmann,ATT,7,6,17,18,85,France,9,30
+268,Yannick Carrasco,MID,0,7,12,18,84,Belgium,5,27
+269,Thomas Lemar,MID,0,1,9,18,83,France,3,25
+270,Felipe,DEF,3,0,12,18,83,Brazil,7,32
+271,Marc ter Stegen,GK,0,0,19,19,88,Germany,3,29
+272,Dani Alves,DEF,1,0,19,19,77,Brazil,1,38
+273,Ronald Araujo,DEF,0,1,12,19,82,Uruguay,22,22
+274,Pique,DEF,0,0,19,19,84,Spain,6,34
+275,Jordi Alba,DEF,1,0,19,19,84,Spain,4,32
+276,Sergio Busquets,MID,3,0,19,19,84,Spain,6,32
+277,Frenkie de Jong,MID,1,3,19,19,87,Netherlands,8,24
+278,Pedri ,MID,2,4,17,19,83,Spain,5,18
+279,Ousmane Dembele,ATT,7,7,19,19,83,France,1,24
+280,Aubameyang,ATT,4,3,19,19,84,Gabon,7,32
+281,Memphis Depay,ATT,6,3,18,19,85,Netherlands,6,27
+282,Ferran Torres,ATT,1,2,12,19,83,Spain,9,21
+283,Luuk de Jong,ATT,2,1,11,19,79,Netherlands,9,30
+284,Adama Traore,ATT,1,0,19,19,79,Spain,7,25
+285,Eric Garcia ,DEF,0,0,0,19,79,Spain,0,20
+286,Thibaut Courtois,GK,0,0,19,20,89,Belgium,21,29
+287,Carvajal,DEF,1,0,19,20,84,Spain,3,29
+288,Eder Militao,DEF,1,2,19,20,83,Brazil,4,23
+289,David Alaba,DEF,0,2,19,20,85,Austria,6,29
+290,Ferland Mendy,DEF,1,0,16,20,83,France,3,26
+291,Casemiro,MID,1,1,16,20,89,Brazil,3,29
+292,Luka Modric,MID,4,6,19,20,88,Croatia,5,35
+293,Toni Kroos,MID,2,8,19,20,88,Germany,7,31
+294,Karim Benzema,ATT,14,2,19,20,91,France,5,33
+295,Marco Asensio,ATT,2,1,8,20,83,Spain,3,25
+296,Vinicius Junior,ATT,4,4,11,20,84,Brazil,4,20
+297,Eden Hazard,ATT,5,2,19,20,84,Belgium,11,30
+298,Rodrygo,ATT,2,4,12,20,80,Brazil,3,20
+299,Marcelo,DEF,2,1,19,20,79,Brazil,8,33
+300,Gareth Bale,MID,1,7,6,20,81,Wales,7,31

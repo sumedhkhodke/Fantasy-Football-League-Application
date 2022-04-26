@@ -1,0 +1,21 @@
+﻿team_id,team_name,wins,losses,draws,manager_id,goals_scored,goals_conceded,possession
+1,Manchester United ,10,3,6,1,44,27,58
+2,Liverpool ,7,7,5,2,37,38,51
+3,Manchester City ,5,9,5,3,31,38,51
+4,Chelsea ,10,6,3,4,35,32,49
+5,Tottenham Hotspur ,9,5,5,5,46,41,54
+6,Arsenal ,8,7,4,6,50,41,44
+7,Aston Villa ,6,6,7,7,32,31,51
+8,West Ham United,6,5,8,8,38,38,50
+9,Watford,6,8,5,9,44,46,49
+10,Leicester City,7,6,6,10,37,32,48
+11,Everton,4,10,5,11,31,42,52
+12,Norwich City,3,9,8,12,33,40,43
+13,Newcastle United,9,8,2,13,39,35,53
+14,Leeds United,8,6,5,14,29,24,54
+15,Crystal Palace,5,7,7,15,31,38,52
+16,Brentford,7,11,1,16,28,40,55
+17,Burnley,9,7,3,17,35,31,45
+18,Atletico Madrid,8,5,6,18,37,34,54
+19,Barcelona,7,10,2,19,29,43,53
+20,Real Madrid,7,7,5,20,40,37,51

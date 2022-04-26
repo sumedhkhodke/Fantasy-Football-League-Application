@@ -40,7 +40,7 @@ def execute_many(conn, df, table):
     # SQL quert to execute
     print(cols)
     print(table)
-    query  = "INSERT INTO "+table+"("+cols+") VALUES(%s,%s,%s,%s,%s,%s,%s,%s)"# ON CONFLICT DO NOTHING" 
+    query  = "INSERT INTO "+table+"("+cols+") VALUES(%s,%s,%s,%s)"# ON CONFLICT DO NOTHING" 
     print(query)
     cursor = conn.cursor()
     try:
@@ -58,9 +58,9 @@ def execute_many(conn, df, table):
 conn = connect(param_dic)
 cursor = conn.cursor()
 
-df = pd.read_csv('../final_data/Fixtures.csv')
-# df = df.convert_dtypes()
+df = pd.read_csv('../final_data/player_scores.csv')
+df = df.convert_dtypes()
 print(df.columns)
 
-x = execute_many(conn, df, 'fixtures')
+x = execute_many(conn, df, 'player_stats')
 conn.close()

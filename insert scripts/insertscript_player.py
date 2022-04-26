@@ -35,13 +35,12 @@ def execute_many(conn, df, table):
     # Create a list of tupples from the dataframe values
     tuples = [tuple(x) for x in df.to_numpy()]
     # Comma-separated dataframe columns
-    print(df.columns)
     cols = ','.join(list(df.columns))
     # SQL quert to execute
     print(cols)
     print(table)
-    query  = "INSERT INTO "+table+"("+cols+") VALUES(%s,%s,%s,%s,%s,%s,%s,%s)"# ON CONFLICT DO NOTHING" 
-    print(query)
+    query  = "INSERT INTO "+table+"("+cols+") VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"# ON CONFLICT DO NOTHING" 
+    # query  = "INSERT INTO %s(%s) VALUES(%%s,%%s,%%s)" % (table, cols)
     cursor = conn.cursor()
     try:
         cursor.executemany(query, tuples)
@@ -58,9 +57,9 @@ def execute_many(conn, df, table):
 conn = connect(param_dic)
 cursor = conn.cursor()
 
-df = pd.read_csv('../final_data/Fixtures.csv')
-# df = df.convert_dtypes()
-print(df.columns)
+df = pd.read_csv('../final_data/Player.csv')
+df = df.convert_dtypes()
+print(df)
 
-x = execute_many(conn, df, 'fixtures')
+x = execute_many(conn, df, 'player')
 conn.close()

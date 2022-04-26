@@ -21,12 +21,10 @@ def connect(params_dic):
     conn = None
     try:
         # connect to the PostgreSQL server
-        print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(**params_dic)
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
         sys.exit(1) 
-    print("Connection successful")
     return conn
 
 def execute_many(conn, df, table):
@@ -37,9 +35,7 @@ def execute_many(conn, df, table):
     tuples = [tuple(x) for x in df.to_numpy()]
     # Comma-separated dataframe columns
     cols = ','.join(list(df.columns))
-    # SQL quert to execute
-    print(cols)
-    print(table)
+    # SQL query to execute
     query  = "INSERT INTO "+table+"("+cols+") VALUES(%s,%s,%s,%s,%s)" 
     # query  = "INSERT INTO %s(%s) VALUES(%%s,%%s,%%s)" % (table, cols)
     cursor = conn.cursor()
@@ -82,25 +78,46 @@ print(user_id_list)
 cursor.close()
 conn.close()
 
+def get_fscore(player_id):
+    fscore_query = 'SELECT elo_score FROM public.player where player_id = '+str(player_id)+';'
+    cursor.execute(fscore_query)
+    fscore = cursor.fetchall()
+    return fscore[0][0]
+
 # execute many
 conn = connect(param_dic)
 cursor = conn.cursor()
 user_id_list = random.choices(user_id_list, k=1000)
 user_sel_1_list, user_sel_2_list, user_sel_3_list = [], [], []
-for i in range(1,1000):
+sum_of_scores_list =[]
+for i in range(1000):
+    sum_of_scores=0
     random_selected = random.sample(list_of_player_ids, 3)
     user_sel_1_list.append(random_selected[0])
+    sum_of_scores += get_fscore(random_selected[0])
     user_sel_2_list.append(random_selected[1])
+    sum_of_scores += get_fscore(random_selected[1])
     user_sel_3_list.append(random_selected[2])
+    sum_of_scores += get_fscore(random_selected[2])
+    sum_of_scores_list.append(sum_of_scores)
+    print("for user selection : ",i, " sum of scores : ", sum_of_scores)
+    print("user_sel_1_list : ",random_selected[0], " user_sel_2_list : ",random_selected[1], " user_sel_3_list : ",random_selected[2])
 
-#change this sum of scores
-sum_of_scores = [sum(x) for x in zip(user_sel_1_list, user_sel_2_list, user_sel_3_list)]
+# #change this sum of scores
+# sum_of_scores = [sum(x) for x in zip(user_sel_1_list, user_sel_2_list, user_sel_3_list)]
 
 # add week_id
 
 # finalize dataframe
-data = {'user_id':user_id_list,'user_sel_1':user_sel_1_list,'user_sel_2':user_sel_2_list,'user_sel_3':user_sel_3_list,'sum_of_scores':sum_of_scores}
+print(len(user_sel_1_list))
+print(len(user_sel_2_list))
+print(len(user_sel_3_list))
+print(len(sum_of_scores_list))
+print(len(user_id_list))
+data = {'user_id':user_id_list,'user_sel_1':user_sel_1_list,'user_sel_2':user_sel_2_list,'user_sel_3':user_sel_3_list,'sum_of_scores':sum_of_scores_list}
 df = pd.DataFrame(data)
 df = df.convert_dtypes()
+print(df)
 x = execute_many(conn, df, 'user_selection')
+
 conn.close()
