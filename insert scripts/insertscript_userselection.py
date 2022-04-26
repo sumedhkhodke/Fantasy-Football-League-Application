@@ -86,12 +86,19 @@ conn.close()
 conn = connect(param_dic)
 cursor = conn.cursor()
 user_id_list = random.choices(user_id_list, k=1000)
-user_sel_1_list = random.choices(list_of_player_ids, k=1000)
-user_sel_2_list = random.choices(list_of_player_ids, k=1000)
-user_sel_3_list = random.choices(list_of_player_ids, k=1000)
+user_sel_1_list, user_sel_2_list, user_sel_3_list = [], [], []
+for i in range(1,1000):
+    random_selected = random.sample(list_of_player_ids, 3)
+    user_sel_1_list.append(random_selected[0])
+    user_sel_2_list.append(random_selected[1])
+    user_sel_3_list.append(random_selected[2])
+
+#change this sum of scores
 sum_of_scores = [sum(x) for x in zip(user_sel_1_list, user_sel_2_list, user_sel_3_list)]
-print(len(user_sel_1_list))
-print(len(user_id_list))
+
+# add week_id
+
+# finalize dataframe
 data = {'user_id':user_id_list,'user_sel_1':user_sel_1_list,'user_sel_2':user_sel_2_list,'user_sel_3':user_sel_3_list,'sum_of_scores':sum_of_scores}
 df = pd.DataFrame(data)
 df = df.convert_dtypes()
