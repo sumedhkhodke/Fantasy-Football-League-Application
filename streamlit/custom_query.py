@@ -23,7 +23,9 @@ def custom_query(query):
     try:
         conn = connect(param_dic)
         cur = conn.cursor()
-        if 'update' or 'insert' or 'delete' in query.lower():
+        print(query)
+        checks = ['update','insert','delete']
+        if any(x in query.lower() for x in checks):
             raise Exception('Not allowed to update, insert or delete')
         cur.execute(query)
         rows = cur.fetchall()
