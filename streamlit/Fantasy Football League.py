@@ -31,7 +31,10 @@ try:
         c_query = st.text_input('Enter your custom query :','SELECT * FROM public.player;')
         df = custom_query.custom_query(c_query)
         st.write("")
-        st.dataframe(df,width = 15000,height = 500)
+        if df is None:
+            st.write("You do not have enough permissions to run this query")
+        else:
+            st.dataframe(df,width = 15000,height = 500)
 
 except Exception as e:
     print(e)

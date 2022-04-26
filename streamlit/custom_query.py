@@ -23,14 +23,16 @@ def custom_query(query):
     try:
         conn = connect(param_dic)
         cur = conn.cursor()
-        print(query)
-        checks = ['update','insert','delete']
+        checks = ['update','insert','delete','drop','create','alter','truncate']
+        flag1=False
         if any(x in query.lower() for x in checks):
-            raise Exception('Not allowed to update, insert or delete')
-        cur.execute(query)
-        rows = cur.fetchall()
-        cols = [desc[0] for desc in cur.description]
-        df = pd.DataFrame(rows, columns=cols)
+            flag1=True
+            df=None
+        if not flag1:
+            cur.execute(query)
+            rows = cur.fetchall()
+            cols = [desc[0] for desc in cur.description]
+            df = pd.DataFrame(rows, columns=cols)
         cur.close()
         conn.close()
         return df
