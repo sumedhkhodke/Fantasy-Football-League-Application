@@ -1,0 +1,251 @@
+
+##### fixtures table
+--------------------------------------------------------------------------------------------
+-- Table: public.fixtures
+
+-- DROP TABLE IF EXISTS public.fixtures;
+
+CREATE TABLE IF NOT EXISTS public.fixtures
+(
+    fixture_id integer NOT NULL,
+    team1_id integer NOT NULL,
+    team2_id integer NOT NULL,
+    winning_team_id integer NOT NULL,
+    fixture_date date NOT NULL,
+    team1_scores integer,
+    team2_scores integer,
+    week_no integer,
+    CONSTRAINT fixtures_pkey PRIMARY KEY (fixture_id),
+    CONSTRAINT fixtures_team1_id_fkey FOREIGN KEY (team1_id)
+        REFERENCES public.team (team_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT fixtures_team2_id_fkey FOREIGN KEY (team2_id)
+        REFERENCES public.team (team_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.fixtures
+    OWNER to postgres;
+
+--------------------------------------------------------------------------------------------
+
+##### manager table
+
+-- Table: public.manager
+
+-- DROP TABLE IF EXISTS public.manager;
+
+CREATE TABLE IF NOT EXISTS public.manager
+(
+    manager_id integer NOT NULL,
+    manager_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    country character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    total_wins integer,
+    CONSTRAINT manager_pkey PRIMARY KEY (manager_id),
+    CONSTRAINT manager_manager_name_key UNIQUE (manager_name)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.manager
+    OWNER to postgres;
+
+--------------------------------------------------------------------------------------------
+
+##### player table
+
+-- Table: public.player
+
+-- DROP TABLE IF EXISTS public.player;
+
+CREATE TABLE IF NOT EXISTS public.player
+(
+    player_id integer NOT NULL,
+    player_name character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    "position" character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    goals_scored integer,
+    assist integer,
+    games_played integer,
+    team_id integer NOT NULL,
+    elo_score integer NOT NULL,
+    country character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    num_fouls integer,
+    age integer NOT NULL,
+    CONSTRAINT player_pkey PRIMARY KEY (player_id),
+    CONSTRAINT team_id FOREIGN KEY (team_id)
+        REFERENCES public.team (team_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.player
+    OWNER to postgres;
+-- Index: fki_team_id
+
+-- DROP INDEX IF EXISTS public.fki_team_id;
+
+CREATE INDEX IF NOT EXISTS fki_team_id
+    ON public.player USING btree
+    (team_id ASC NULLS LAST)
+    TABLESPACE pg_default;
+	
+--------------------------------------------------------------------------------------------
+
+##### player_stats table
+
+-- Table: public.player_stats
+
+-- DROP TABLE IF EXISTS public.player_stats;
+
+CREATE TABLE IF NOT EXISTS public.player_stats
+(
+    psid integer NOT NULL,
+    player_id integer NOT NULL,
+    fscore_total integer,
+    week_no integer,
+    CONSTRAINT player_stats_pkey PRIMARY KEY (psid),
+    CONSTRAINT player_stats_player_id_week_no_key UNIQUE (player_id, week_no),
+    CONSTRAINT player_stats_player_id_fkey FOREIGN KEY (player_id)
+        REFERENCES public.player (player_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.player_stats
+    OWNER to postgres;
+	
+--------------------------------------------------------------------------------------------
+
+##### team table
+
+-- Table: public.team
+
+-- DROP TABLE IF EXISTS public.team;
+
+CREATE TABLE IF NOT EXISTS public.team
+(
+    team_id integer NOT NULL,
+    team_name character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    wins integer,
+    losses integer,
+    draws integer,
+    manager_id integer NOT NULL,
+    goals_scored integer,
+    goals_conceded integer,
+    possession double precision NOT NULL,
+    CONSTRAINT team_pkey PRIMARY KEY (team_id),
+    CONSTRAINT team_manager_id_key UNIQUE (manager_id),
+    CONSTRAINT team_manager_id_fkey FOREIGN KEY (manager_id)
+        REFERENCES public.manager (manager_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.team
+    OWNER to postgres;
+
+--------------------------------------------------------------------------------------------
+
+##### user table
+-- Table: public.user
+
+-- DROP TABLE IF EXISTS public."user";
+
+CREATE TABLE IF NOT EXISTS public."user"
+(
+    user_id integer NOT NULL,
+    username character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    role_type character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT user_pkey PRIMARY KEY (user_id),
+    CONSTRAINT user_email_key UNIQUE (email),
+    CONSTRAINT user_username_key UNIQUE (username)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."user"
+    OWNER to postgres;
+	
+--------------------------------------------------------------------------------------------
+
+##### user_leaderboard table
+-- Table: public.user_leaderboard
+
+-- DROP TABLE IF EXISTS public.user_leaderboard;
+
+CREATE TABLE IF NOT EXISTS public.user_leaderboard
+(
+    user_id integer NOT NULL,
+    rank_id integer NOT NULL,
+    sum_of_scores integer NOT NULL,
+    CONSTRAINT user_leaderboard_rank_id_key UNIQUE (rank_id),
+    CONSTRAINT user_id FOREIGN KEY (user_id)
+        REFERENCES public."user" (user_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.user_leaderboard
+    OWNER to postgres;
+-- Index: fki_user_id
+
+-- DROP INDEX IF EXISTS public.fki_user_id;
+
+CREATE INDEX IF NOT EXISTS fki_user_id
+    ON public.user_leaderboard USING btree
+    (user_id ASC NULLS LAST)
+    TABLESPACE pg_default;
+
+--------------------------------------------------------------------------------------------
+
+##### user_selection table
+-- Table: public.user_selection
+
+-- DROP TABLE IF EXISTS public.user_selection;
+
+CREATE TABLE IF NOT EXISTS public.user_selection
+(
+    user_id integer NOT NULL,
+    user_sel_1 integer NOT NULL,
+    user_sel_2 integer NOT NULL,
+    user_sel_3 integer NOT NULL,
+    sum_of_scores integer,
+    CONSTRAINT user_selection_user_id_fkey FOREIGN KEY (user_id)
+        REFERENCES public."user" (user_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT user_selection_user_sel_1_fkey FOREIGN KEY (user_sel_1)
+        REFERENCES public.player (player_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT user_selection_user_sel_2_fkey FOREIGN KEY (user_sel_2)
+        REFERENCES public.player (player_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT user_selection_user_sel_3_fkey FOREIGN KEY (user_sel_3)
+        REFERENCES public.player (player_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.user_selection
+    OWNER to postgres;
+	
+--------------------------------------------------------------------------------------------
