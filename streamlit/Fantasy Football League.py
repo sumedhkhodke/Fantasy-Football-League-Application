@@ -29,7 +29,7 @@ try:
         st.markdown("""
         # ER diagram
         """)
-        ER_diag = Image.open('ER.png')
+        ER_diag = Image.open('New_ER.png')
         st.image(ER_diag,width = 750)
 
     if navigate == "Run Select Query":
