@@ -2,7 +2,7 @@
 # setup = 'Local'
 # param_dic = {
 #     "host"      : "localhost",
-#     "database"  : "test1",
+#     "database"  : "ready_to_use",
 #     "user"      : "postgres",
 #     "password"  : "neww"
 # }
